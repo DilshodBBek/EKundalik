@@ -1,10 +1,12 @@
-﻿namespace EKundalik.Presentation
+﻿using EKundalik.Infrastructure.Persistence;
+
+namespace EKundalik.Presentation
 {
     internal class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+            EKundalikDbContext.CreateDb();
         }
     }
 }

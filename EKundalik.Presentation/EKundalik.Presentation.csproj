@@ -7,4 +7,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\EKundalik.Infrastructure\EKundalik.Infrastructure.csproj" />
+  </ItemGroup>
+
 </Project>

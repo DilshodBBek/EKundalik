@@ -6,4 +6,12 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="Interfaces\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\EKundalik.Infrastructure\EKundalik.Infrastructure.csproj" />
+  </ItemGroup>
+
 </Project>
