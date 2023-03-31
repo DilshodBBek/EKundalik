@@ -1,0 +1,54 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33122.133
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EKundalik.Presentation", "EKundalik.Presentation\EKundalik.Presentation.csproj", "{6AF7EB8C-751C-42CD-884E-5354EBFA7CDF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "EKundalik.Domain", "EKundalik.Domain", "{9D5B7472-EDEA-42B2-A259-50F377146310}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "EKundalik.Application", "EKundalik.Application", "{D42389D5-5275-4E84-A6FD-DF454CC383A5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "EKundalik.Infrastructure", "EKundalik.Infrastructure", "{8065654D-289F-44A7-9F94-9739652BF761}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EKundalik.Application", "EKundalik.Application\EKundalik.Application.csproj", "{E5C73CF2-519A-4857-A413-D05B21F0E0F6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EKundalik.Domain", "EKundalik.Domain\EKundalik.Domain.csproj", "{BB94E4A9-523A-4218-9F2F-28FE42E8BDE4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EKundalik.Infrastructure", "EKundalik.Infrastructure\EKundalik.Infrastructure.csproj", "{A87CE6E0-FF06-415E-ADFC-B0F431DFF440}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6AF7EB8C-751C-42CD-884E-5354EBFA7CDF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6AF7EB8C-751C-42CD-884E-5354EBFA7CDF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6AF7EB8C-751C-42CD-884E-5354EBFA7CDF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6AF7EB8C-751C-42CD-884E-5354EBFA7CDF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E5C73CF2-519A-4857-A413-D05B21F0E0F6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E5C73CF2-519A-4857-A413-D05B21F0E0F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E5C73CF2-519A-4857-A413-D05B21F0E0F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E5C73CF2-519A-4857-A413-D05B21F0E0F6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BB94E4A9-523A-4218-9F2F-28FE42E8BDE4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BB94E4A9-523A-4218-9F2F-28FE42E8BDE4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BB94E4A9-523A-4218-9F2F-28FE42E8BDE4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BB94E4A9-523A-4218-9F2F-28FE42E8BDE4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A87CE6E0-FF06-415E-ADFC-B0F431DFF440}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A87CE6E0-FF06-415E-ADFC-B0F431DFF440}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A87CE6E0-FF06-415E-ADFC-B0F431DFF440}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A87CE6E0-FF06-415E-ADFC-B0F431DFF440}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{E5C73CF2-519A-4857-A413-D05B21F0E0F6} = {D42389D5-5275-4E84-A6FD-DF454CC383A5}
+		{BB94E4A9-523A-4218-9F2F-28FE42E8BDE4} = {9D5B7472-EDEA-42B2-A259-50F377146310}
+		{A87CE6E0-FF06-415E-ADFC-B0F431DFF440} = {8065654D-289F-44A7-9F94-9739652BF761}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {736BA2F4-84F1-4CCA-8E3E-DBDDBBB24503}
+	EndGlobalSection
+EndGlobal
