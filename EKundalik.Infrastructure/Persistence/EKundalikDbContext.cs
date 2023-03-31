@@ -52,7 +52,7 @@ namespace EKundalik.Infrastructure.Persistence
 
                 NpgsqlCommand command = connection.CreateCommand();
                 connection.Close();
-            }
+            };
         }
         public static void CreateDb()
         {
