@@ -9,7 +9,7 @@ namespace EKundalik.Domain.Models
     public abstract class Person 
     {
         public required string FullName { get; set; }
-        public DateOnly BirthDate { get; set; } 
+        public DateTime BirthDate { get; set; } 
         /// <summary>
         /// True = Male
         /// False = Female 

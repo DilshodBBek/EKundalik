@@ -1,16 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace EKundalik.Domain.Models
+﻿namespace EKundalik.Domain.Models
 {
-   public class StudentTeacher
+    public class StudentTeacher
     {
         public int Id { get; set; }
-        public required Student StudentId { get; set; }
-        public required Teacher TeacherId { get; set; }
-        public required Subject SubjectId { get; set; }
+        public required Student Student { get; set; }
+        public required Teacher Teacher { get; set; }
+        public required Subject Subject { get; set; }
+
+        public override string ToString()
+        {
+            return $"Id:{Id},\n Student:{Student},\n Teacher:{Teacher},\n Subject:{Subject}";
+        }
     }
 }

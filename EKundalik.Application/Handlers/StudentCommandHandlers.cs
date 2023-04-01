@@ -1,41 +1,46 @@
 ﻿using EKundalik.Application.Interfaces;
 using EKundalik.Domain.Models;
 using EKundalik.Infrastructure.Persistence;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace EKundalik.Application.Handlers
 {
-    public class StudentCommandHandlers:IRepository<Student>
+    public class StudentCommandHandlers : IRepository<Student>
     {
         private readonly EKundalikDbContext _db = new();
 
-        public Task<IEnumerable<Student>> GetAllAsync()
+        public async Task<IEnumerable<Student>> GetAllAsync()
         {
-            _db.Students.GetAllAsync();
+            return await _db.Students.GetAllAsync();
         }
 
-        public Task<Student> GetAsync(int id)
+        public async Task<Student> GetByIdAsync(int id)
         {
-            throw new NotImplementedException();
+            return await _db.Students.GetByIdAsync(id);
+
         }
 
-        public Task Create(Student obj)
+        public async Task AddAsync(Student obj)
         {
-            throw new NotImplementedException();
+            await _db.Students.AddAsync(obj);
+
         }
 
-        public Task<bool> UpdateAsync(Student entity)
+        public async Task<bool> UpdateAsync(Student entity)
         {
-            throw new NotImplementedException();
+            return await _db.Students.UpdateAsync(entity);
+
         }
 
-        public Task DeleteAsync(int id)
+        public async Task DeleteAsync(int id)
         {
-            throw new NotImplementedException();
+            await _db.Students.DeleteAsync(id);
+
+        }
+
+        public async Task AddRangeAsync(List<Student> students)
+        {
+            await _db.Students.AddRangeAsync(students);
+
         }
     }
 }

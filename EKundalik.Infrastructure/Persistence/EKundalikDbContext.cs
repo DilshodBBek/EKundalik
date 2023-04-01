@@ -5,11 +5,11 @@ namespace EKundalik.Infrastructure.Persistence
     {
         public static string conString = File.ReadAllText(@"..\..\..\..\..\EKundalik.Presentation\EKundalik.Infrastructure\Appconfig.txt");
 
-        public static void InitializeTables()
+        public void InitializeTables()
         {
             try
             {
-                using NpgsqlConnection connection = new NpgsqlConnection(conString);
+                using NpgsqlConnection connection = new(conString);
                 connection.Open();
                 string query = @"CREATE TABLE student
                                 (
@@ -50,11 +50,16 @@ namespace EKundalik.Infrastructure.Persistence
                                     PRIMARY KEY (grade_id)
                                 );";
 
-                NpgsqlCommand command = connection.CreateCommand();
+                NpgsqlCommand command = new(query, connection);
+                command.ExecuteNonQuery();
                 connection.Close();
-            };
+            }
+            catch (Exception ex)
+            {
+
+            }
         }
-        public static void CreateDb()
+        public void CreateDb()
         {
             try
             {
@@ -66,8 +71,8 @@ namespace EKundalik.Infrastructure.Persistence
             {
                 if (e.Message.Contains("does not exist", StringComparison.OrdinalIgnoreCase))
                 {
-                    conString = conString.Replace("ekundalik", "postgres");
-                    using NpgsqlConnection connection = new(conString);
+                    string con = conString.Replace("ekundalik", "postgres");
+                    using NpgsqlConnection connection = new(con);
                     connection.Open();
                     string query = "create database ekundalik";
                     NpgsqlCommand command = new(query, connection);
@@ -82,6 +87,10 @@ namespace EKundalik.Infrastructure.Persistence
 
         }
 
-        public DbStudents Students { get; set; }
+        public DbStudents Students { get; set; } = new();
+        public DbTeacher Teachers { get; set; } = new();
+        public DbGrade Grades { get; set; } = new();
+        public DbSubject Subjects { get; set; } = new();
+        public DbStudentTeacher StudentTeachers { get; set; } = new();
     }
 }

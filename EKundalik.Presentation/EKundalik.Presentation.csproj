@@ -8,6 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\EKundalik.Application\EKundalik.Application.csproj" />
     <ProjectReference Include="..\EKundalik.Infrastructure\EKundalik.Infrastructure.csproj" />
   </ItemGroup>
 
